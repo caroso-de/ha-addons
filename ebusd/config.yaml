@@ -1,5 +1,5 @@
 name: eBUSd
-version: "0.81-more-options.1"
+version: "0.81-more-options.2"
 slug: ebusd
 description: >
   This Add-on runs eBUSd, a daemon for handling communication with eBUS devices
@@ -19,6 +19,8 @@ uart: true
 options:
   scanconfig: true
   foreground: true
+  
+  
 schema:
   device: "device(subsystem=tty)"
   port: "port?"
@@ -29,7 +31,7 @@ schema:
   configpath: "str?"
   pollinterval: "int(0,30)?"
   accesslevel: "str?"
-  httpport: "int?"
+  httpport: "port?"
   logareas: "list(main|network|bus|update|all)?"
   loglevel: "list(error|notice|info|debug)?"
   mqtthost: "str?"
@@ -41,3 +43,9 @@ schema:
   mqttretain: "bool?"
   mqtttopic: "str?"
   mqttverbose: "bool?"
+  
+ports:
+  4711/tcp: 4711
+  
+map: 
+  - config
