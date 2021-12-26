@@ -25,3 +25,7 @@ Thank you to
 
 And thanks to you for your interest in this project! If it is of any use to you, you can buy me a coffee:
 https://www.paypal.com/paypalme/lukasgrebe
+
+# todos
+- make exposed http port configurable
+- check config path is working
