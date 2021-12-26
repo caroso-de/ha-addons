@@ -17,6 +17,18 @@ configuration:
   scanconfig:
     name: Scan Config
     description: Pick CSV config files matching initial scan (ADDR="none" or empty for no initial scan message "full" for full scan, or a single hex address to scan, default is to send a broadcast ident message).
+  configpath:
+    name: Config Path
+    description: Read CSV config files from PATH [http://cfg.ebusd.eu/]
+  pollinterval:
+    name: Polling Interval
+    description: Poll for data every SEC seconds (0=disable) [5]
+  accesslevel:
+    name: Access Level
+    description: Set default access level(s) to LEVEL ("*" for everything, multiple levels separated by comma) [""]
+  httpport:
+    name: HTTP API Port
+    description: Listen for HTTP connections on PORT, 0 to disable [0]
   logareas:
     name: Log Area
     description: Only write log for matching AREA
@@ -44,3 +56,9 @@ configuration:
   mqttretain:
     name: MQTT Retain
     description: All MQTT messages sent with retain flag
+  mqtttopic:
+    name: MQTT Topic
+    description: Use MQTT TOPIC (prefix before /%circuit/%name or complete format including the option to publish by field when including "%field") [ebusd]
+  mqttverbose:
+    name: MQTT Verbose
+    description: Publish all available attributes
