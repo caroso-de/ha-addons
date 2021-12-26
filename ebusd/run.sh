@@ -3,7 +3,7 @@
 declare -a ebusd_args
 
 #boolean options
-declare options=( "readonly" "scanconfig" "foreground" "mqttjson" "mqttlog" "mqttretain")
+declare options=( "readonly" "scanconfig" "foreground" "mqttjson" "mqttlog" "mqttretain" "mqttverbose")
 for optName in "${options[@]}"
 do
     if bashio::config.true ${optName}; then
@@ -12,7 +12,7 @@ do
 done
 
 #other options
-declare options=( "device" "port" "latency" "configpath" "pollinterval" "accesslevel" "httpport" "logareas" "loglevel" "mqtthost" "mqttport" "mqttuser" "mqttpass" "mqtttopic" "mqttverbose")
+declare options=( "device" "port" "latency" "configpath" "pollinterval" "accesslevel" "httpport" "logareas" "loglevel" "mqtthost" "mqttport" "mqttuser" "mqttpass" "mqtttopic")
 for optName in "${options[@]}"
 do
     if ! bashio::config.is_empty ${optName}; then
