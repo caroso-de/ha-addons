@@ -29,4 +29,4 @@ https://www.paypal.com/paypalme/lukasgrebe
 # todos
 - make exposed http port configurable
 - check config path is working
-- add infors for rest api (easier to get all possible values data/<circuit>?full&required
+- add hints for http api usage (e.g. get all possible values data/<circuit>?full&required)
