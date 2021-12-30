@@ -29,4 +29,4 @@ https://www.paypal.com/paypalme/lukasgrebe
 # todos
 - make exposed http port configurable
 - check config path is working
-- add hints for http api usage (e.g. get all possible values data/<circuit>?full&required)
+- add hints for http api usage (e.g. http://homeassistant:4711/data/700/?full&verbose&numeric&required)
